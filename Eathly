@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "3ed4eecf-0fcf-4260-b72a-e38783152063",
+		"name": "Control Deportivo Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "Crear Cuanta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Valmir",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "16.3",
+									"type": "text"
+								},
+								{
+									"key": "altura",
+									"value": "183",
+									"type": "text"
+								},
+								{
+									"key": "edad",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "alergia",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "enfermedad",
+									"value": "no",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDgxZWFhNmE1OTIxNjhjN2U4YTYiLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsImlhdCI6MTYyNjQ3NDc3MiwiZXhwIjoxNjI2OTA2NzcyfQ.770bzIuGjbDb9rPYm-RIZa8VistbH55eNOzUFP6cbus",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDQyOWM2MjU3YTE4NzQ0N2IxNWQiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjY0NzQ3OTUsImV4cCI6MTYyNjkwNjc5NX0.9Bhb9VNSvzR9biIx65tQWPvwnUN72-fCo58u5pnoYGI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDgxZWFhNmE1OTIxNjhjN2U4YTYiLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsImlhdCI6MTYyNjQ3NDU1MiwiZXhwIjoxNjI2OTA2NTUyfQ.V65RcKSaOjp89mpiDr6PBMi0GG0wEnJgK9RrbvZxeR4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "peso",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDQyOWM2MjU3YTE4NzQ0N2IxNWQiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjY0NzQ2MjQsImV4cCI6MTYyNjkwNjYyNH0.mm2Cr0e8l3PbuhMrusJ-v3nRu_wJujhhgBJnU7SbnIY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuario/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60f2081eaa6a592168c7e8a6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ligas",
+			"item": [
+				{
+					"name": "agragrajornada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

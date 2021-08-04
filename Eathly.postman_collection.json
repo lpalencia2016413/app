@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "80172c41-2783-4a1f-b7b0-1aa99d9972ff",
+		"name": "Eathly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear Cuanta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Valmir",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "16.3",
+									"type": "text"
+								},
+								{
+									"key": "altura",
+									"value": "183",
+									"type": "text"
+								},
+								{
+									"key": "edad",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "alergia",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "enfermedad",
+									"value": "no",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDgxZWFhNmE1OTIxNjhjN2U4YTYiLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsImlhdCI6MTYyNjQ3NDc3MiwiZXhwIjoxNjI2OTA2NzcyfQ.770bzIuGjbDb9rPYm-RIZa8VistbH55eNOzUFP6cbus",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDQyOWM2MjU3YTE4NzQ0N2IxNWQiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjY0NzQ3OTUsImV4cCI6MTYyNjkwNjc5NX0.9Bhb9VNSvzR9biIx65tQWPvwnUN72-fCo58u5pnoYGI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDgxZWFhNmE1OTIxNjhjN2U4YTYiLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsImlhdCI6MTYyNjQ3NDU1MiwiZXhwIjoxNjI2OTA2NTUyfQ.V65RcKSaOjp89mpiDr6PBMi0GG0wEnJgK9RrbvZxeR4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "peso",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGYyMDQyOWM2MjU3YTE4NzQ0N2IxNWQiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjY0NzQ2MjQsImV4cCI6MTYyNjkwNjYyNH0.mm2Cr0e8l3PbuhMrusJ-v3nRu_wJujhhgBJnU7SbnIY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuario/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60f2081eaa6a592168c7e8a6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comidas",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTAyNTU2NzhmN2YyYjQ0MmNmZDYxMDEiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2Mjc2MDkyNTcsImV4cCI6MTYyODEyNzY1N30.7uT4Wbu8enqd27GVsNZp13hfYQsmy5kfzkJIPrn09I0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "as",
+									"type": "text"
+								},
+								{
+									"key": "calorias",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "grasas",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "carbohidratos",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "azucares",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "fibra",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "vita_mineral",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "proteina",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sodio",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "colesterol",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "porciones",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "ingredientes",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarComida",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarComida"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dietas",
+			"item": [
+				{
+					"name": "Agregar Dieta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTAyNTU2NzhmN2YyYjQ0MmNmZDYxMDEiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2Mjc2MDY2MzYsImV4cCI6MTYyODEyNTAzNn0.-HHAXOsaLhfUosHphgq87BXqgB9obf_DhY-zMmR-Fsc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "marcado",
+									"type": "text"
+								},
+								{
+									"key": "pesoMin",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "pesoMax",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "alturaMin",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "alturaMax",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "edadMin",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "edadMax",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarDieta",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarDieta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Dieta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTAyNTU2NzhmN2YyYjQ0MmNmZDYxMDEiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2Mjc2MDY2MzYsImV4cCI6MTYyODEyNTAzNn0.-HHAXOsaLhfUosHphgq87BXqgB9obf_DhY-zMmR-Fsc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "alturaMax",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarDieta/61034e82369bd8774067d644",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarDieta",
+								"61034e82369bd8774067d644"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Dieta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTAyNTU2NzhmN2YyYjQ0MmNmZDYxMDEiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2Mjc2MDkyNTcsImV4cCI6MTYyODEyNzY1N30.7uT4Wbu8enqd27GVsNZp13hfYQsmy5kfzkJIPrn09I0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/eliminarDieta/610353b9801eb47c082e63a8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarDieta",
+								"610353b9801eb47c082e63a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Dietas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/obtenerDietas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerDietas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignar Dieta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTA0Yjg5ZWI2ZGI0ZmM3ODRjNGU2ZTAiLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsImlhdCI6MTYyNzcwNDE0OSwiZXhwIjoxNjI4MTM2MTQ5fQ.xLRGk6Tm-7vjhYLOXVNwkhE8YpEQoXgL5FH_REBRE-8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/asignarDieta/6103539c801eb47c082e63a5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asignarDieta",
+								"6103539c801eb47c082e63a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Comida a Dieta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTAyNTU2NzhmN2YyYjQ0MmNmZDYxMDEiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2Mjc2MTU1NDgsImV4cCI6MTYyODEzMzk0OH0.iS9qzhxxxGhLQs7G4-k5dvDT4YS6yUf4Ka-iLcBcZIs",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tiempo",
+									"value": "Desayuno",
+									"type": "text"
+								},
+								{
+									"key": "comida",
+									"value": "61035f125850316aa40ec093",
+									"type": "text"
+								},
+								{
+									"key": "porciones",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarComidaDietas/6103539c801eb47c082e63a5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarComidaDietas",
+								"6103539c801eb47c082e63a5"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6103539c801eb47c082e63a5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
